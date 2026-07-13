@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17382c">
+  <meta name="description" content="Aqeel Cabin & Jungle River Dome — naturaleza, río, disponibilidad y reserva directa por WhatsApp.">
+  <title>Aqeel Cabin & Jungle River Dome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">AQEEL <span>Cabin & Dome</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="#stay" data-i18n="navStay">Hospedaje</a>
+      <a href="#gallery" data-i18n="navGallery">Galería</a>
+      <a href="#availability" data-i18n="navAvailability">Disponibilidad</a>
+      <a href="#reviews" data-i18n="navReviews">Reseñas</a>
+      <a href="#nearby" data-i18n="navNearby">Cerca</a>
+      <a href="getting-here.html" data-i18n="navGettingHere">Cómo llegar</a>
+    </nav>
+    <div class="lang-switch">
+      <button data-lang="es" class="active">ES</button><button data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-media">
+        <video id="heroVideo" autoplay muted loop playsinline preload="metadata"
+               poster="assets/hero-poster.jpg">
+          <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroEyebrow">Retiro privado en la naturaleza de Panamá</p>
+        <h1 data-i18n="heroTitle">Duerme junto al río. Despierta en la selva.</h1>
+        <p data-i18n="heroText">Aqeel Cabin y Jungle River Dome en Churuquita Grande, Coclé.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#availability" data-i18n="checkDates">Revisar fechas</a>
+          <a class="btn glass" href="https://wa.me/14037008800" target="_blank" rel="noopener" data-i18n="bookWhatsApp">Reservar por WhatsApp</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#stay" aria-label="Desplazarse">⌄</a>
+    </section>
+
+    <section class="section intro" id="stay">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="chooseStayEyebrow">Elige tu estadía</p>
+        <h2 data-i18n="chooseStayTitle">Dos experiencias privadas, una propiedad natural</h2>
+      </div>
+      <div class="stay-grid">
+        <article class="stay-card">
+          <div class="stay-visual cabin-visual"><span>🏡</span></div>
+          <div class="stay-body">
+            <h3>Aqeel Cabin</h3>
+            <p data-i18n="cabinDesc">Cabaña privada con cocina, terraza, hamacas, BBQ, Wi‑Fi Starlink y espacio para familias o grupos pequeños.</p>
+            <a href="#availability" class="text-link property-jump" data-property="cabin" data-i18n="checkCabin">Ver disponibilidad de la cabaña →</a>
+          </div>
+        </article>
+        <article class="stay-card">
+          <div class="stay-visual dome-visual"><span>⛺</span></div>
+          <div class="stay-body">
+            <h3>Jungle River Dome</h3>
+            <p data-i18n="domeDesc">Domo privado junto al río con cama queen, aire acondicionado, kitchenette, terraza y BBQ exterior.</p>
+            <a href="#availability" class="text-link property-jump" data-property="dome" data-i18n="checkDome">Ver disponibilidad del domo →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story">
+      <div class="story-card">
+        <div>
+          <p class="eyebrow" data-i18n="storyEyebrow">La historia de Aqeel</p>
+          <h2 data-i18n="storyTitle">Un lugar creado con propósito</h2>
+        </div>
+        <p data-i18n="storyText">Aqeel Cabin & Dome lleva el nombre del hijo del propietario, Aqeel. La propiedad nació durante el viaje de su familia a Panamá y se convirtió en un refugio de naturaleza, descanso y conexión.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-heading split">
+        <div><p class="eyebrow" data-i18n="galleryEyebrow">Galería</p><h2 data-i18n="galleryTitle">Naturaleza real, momentos reales</h2></div>
+        <p data-i18n="galleryHint">Agrega todas tus fotos y videos en la carpeta <strong>assets</strong> y enuméralos en <strong>config.js</strong>.</p>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section class="section availability-section" id="availability">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="availabilityEyebrow">Disponibilidad en vivo</p>
+        <h2 data-i18n="availabilityTitle">¿Qué alojamiento deseas revisar?</h2>
+      </div>
+
+      <div class="property-selector" role="radiogroup" aria-label="Alojamiento">
+        <button class="property-option active" data-property="cabin" role="radio" aria-checked="true">
+          <span class="option-icon">🏡</span>
+          <span><strong>Aqeel Cabin</strong><small data-i18n="cabinSelector">Revisar calendario de la cabaña</small></span>
+          <span class="checkmark">✓</span>
+        </button>
+        <button class="property-option" data-property="dome" role="radio" aria-checked="false">
+          <span class="option-icon">⛺</span>
+          <span><strong>Jungle River Dome</strong><small data-i18n="domeSelector">Revisar calendario del domo</small></span>
+          <span class="checkmark">✓</span>
+        </button>
+      </div>
+
+      <div class="selected-banner"><span data-i18n="currentlyChecking">Actualmente revisando:</span> <strong id="selectedPropertyName">Aqeel Cabin</strong></div>
+
+      <div class="booking-layout">
+        <div class="calendar-card">
+          <div class="calendar-top">
+            <button id="prevMonth" aria-label="Mes anterior">‹</button>
+            <h3 id="monthTitle">—</h3>
+            <button id="nextMonth" aria-label="Mes siguiente">›</button>
+          </div>
+          <div class="legend">
+            <span><i class="available-dot"></i><span data-i18n="available">Disponible</span></span>
+            <span><i class="booked-dot"></i><span data-i18n="booked">Ocupado</span></span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+          <p id="calendarStatus" class="small-note" data-i18n="loadingCalendar">Cargando calendario…</p>
+        </div>
+
+        <form class="booking-card" id="bookingForm">
+          <h3 data-i18n="bookingRequest">Solicitud de reserva</h3>
+          <label><span data-i18n="arrival">Llegada</span><input id="arrivalDate" type="date" required></label>
+          <div class="two-col">
+            <label><span data-i18n="nights">Noches</span><input id="nights" type="number" min="1" value="1" required></label>
+            <label><span data-i18n="guests">Huéspedes</span><input id="guests" type="number" min="1" value="2" required></label>
+          </div>
+          <button class="btn primary full" type="submit" data-i18n="checkAndWhatsApp">Revisar y continuar por WhatsApp</button>
+          <p id="availabilityMessage" class="availability-message"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="section-heading split">
+        <div><p class="eyebrow" data-i18n="reviewsEyebrow">Opiniones de huéspedes</p><h2 data-i18n="reviewsTitle">Experiencias compartidas</h2></div>
+        <a class="btn outline" href="https://g.page/r/CUvX_9_BzxY7EBI/review" target="_blank" rel="noopener" data-i18n="leaveGoogleReview">Dejar reseña en Google</a>
+      </div>
+      <div class="review-source-tabs">
+        <button class="active" data-source="google">Google</button>
+        <button data-source="airbnb">Airbnb</button>
+        <button data-source="booking">Booking.com</button>
+      </div>
+      <div id="reviewsSummary" class="reviews-summary"></div>
+      <div id="reviewsGrid" class="reviews-grid"></div>
+      <p class="integration-note" id="reviewsNote"></p>
+    </section>
+
+    <section class="section" id="nearby">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="nearbyEyebrow">Comida y compras cerca</p>
+        <h2 data-i18n="nearbyTitle">Restaurantes y supermercados</h2>
+      </div>
+      <div id="nearbyGrid" class="nearby-grid"></div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="faq-card">
+        <p class="eyebrow">AI Guest Assistant</p>
+        <h2 data-i18n="faqTitle">Pregunta sobre la estadía</h2>
+        <p data-i18n="faqText">Escribe en español o inglés. El asistente usa tu base de datos de preguntas frecuentes.</p>
+        <div class="faq-input-row">
+          <input id="faqInput" type="text" data-i18n-placeholder="faqPlaceholder" placeholder="Escribe tu pregunta aquí">
+          <button id="faqAsk" class="btn primary" data-i18n="ask">Preguntar</button>
+        </div>
+        <div id="faqAnswer" class="faq-answer"></div>
+      </div>
+    </section>
+
+    <section class="section contact-strip">
+      <div><p class="eyebrow" data-i18n="readyEyebrow">¿Listo para escapar?</p><h2 data-i18n="readyTitle">Confirma tu fecha directamente con nosotros</h2></div>
+      <a class="btn primary" href="https://wa.me/14037008800" target="_blank" rel="noopener">WhatsApp +1 403 700 8800</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Aqeel Cabin & Jungle River Dome</strong><p>Churuquita Grande, Coclé, Panamá</p></div>
+    <div class="footer-links">
+      <a href="https://instagram.com/aqeelcabinpanama" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://airbnb.com/h/aqeelcabin" target="_blank" rel="noopener">Airbnb Cabin</a>
+      <a href="https://airbnb.com/h/aqeeldome" target="_blank" rel="noopener">Airbnb Dome</a>
+      <a href="getting-here.html" data-i18n="navGettingHere">Cómo llegar</a>
+    </div>
+  </footer>
+
+  <dialog id="lightbox">
+    <button id="lightboxClose" aria-label="Cerrar">×</button>
+    <div id="lightboxContent"></div>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
